@@ -45,7 +45,7 @@ $ # enjoy
 
 Screenshot:
 <div align="center">
-	<img src="https://raw.githubusercontent.com/siruidops/instagram_bridge_bot/raw/images/text.gif">
+	<img src="https://github.com/siruidops/instagram_bridge_bot/raw/master/images/1.jpg">
 	
 </div>
 

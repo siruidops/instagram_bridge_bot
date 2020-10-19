@@ -27,7 +27,6 @@ $ sudo pip install -r requirements.txt
 $ python createcookie.py {username} {password}
 $ python instagram_bridge_bot.py
 $ # enjoy
-#
 ```
 <br />
 
@@ -40,7 +39,6 @@ $ sudo pip3 install -r requirements.txt
 $ python3 createcookie.py {username} {password}
 $ python3 instagram_bridge_bot.py
 $ # enjoy
-#
 ```
 <br />
 

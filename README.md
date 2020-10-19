@@ -41,12 +41,14 @@ $ python3 instagram_bridge_bot.py
 $ # enjoy
 ```
 <br />
-```
+
+```text
 /public         -> Change account mode to public
 /private        -> Change account mode to private
 /change_profile -> Change profile (e.g. /change_profile name bio url email phone gender
 /get_profile    -> get profile picture of a user
 ```
+
 <br />
 Screenshot:
 <div align="center">

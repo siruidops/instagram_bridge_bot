@@ -1,0 +1,2 @@
+instagram-private-api==1.6.0.0
+telepot==12.7

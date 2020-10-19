@@ -51,7 +51,7 @@ Screenshot:
 
 
 License:
-	<a href="https://raw.githubusercontent.com/siruidops/instagram_bridge_bot/raw/LICENSE">GPL.v3</a>
+	<br /><a href="https://raw.githubusercontent.com/siruidops/instagram_bridge_bot/raw/LICENSE">     GPL.v3</a>
 
 
 

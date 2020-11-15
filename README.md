@@ -43,10 +43,15 @@ $ # enjoy
 <br />
 
 ```text
-/public         -> Change account mode to public
-/private        -> Change account mode to private
-/change_profile -> Change profile (e.g. /change_profile name bio url email phone gender
-/get_profile    -> get profile picture of a user
+/public <username>               -> Change account mode to public.
+/private <username>              -> Change account mode to private.
+/change_profile <username>       -> Change profile (e.g. /change_profile name bio url email phone gender.
+/get_profile <username>          -> Get profile picture of a user.
+/block <username>                -> Block a user.
+/unblock <username>              -> Unblock a user.
+/enable_notification <username>  -> Enable post notification.
+/disbale_notification <username> -> Disbale post notification.
+/blocked_list                    -> Get list of blocked users.
 ```
 
 <br />

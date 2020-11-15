@@ -21,7 +21,7 @@ from instagram_private_api import (
 
 # Telegram
 api_bot = ""
-user_id = 00000000 
+user_id = 0000000000
 
 feeds_id = []
 stories_id = []
@@ -134,6 +134,64 @@ def handler(message):
 			ig_client.edit_profile(firstname, bio, url, email, phone, int(gender))
 			bot.sendMessage(user_id, text="bio edited")
 
+
+		elif text.split(" ")[0] == "/enable_notification":
+			username = text.split(" ")[1]
+			username_id = ig_client.username_info(username)['user']['pk']
+			notif = ig_client.enable_post_notifications(username_id)
+
+			text_send = "post notification is now enabled for {}".format(username)
+			bot.sendMessage(chat_id=user_id, text=text_send)
+
+		elif text.split(" ")[0] == "/disable_notification":
+			username = text.split(" ")[1]
+			username_id = ig_client.username_info(username)['user']['pk']
+			notif = ig_client.disable_post_notifications(username_id)
+
+			text_send = "post notification is now disbaled for {}".format(username)
+			bot.sendMessage(chat_id=user_id, text=text_send)
+
+		elif text.split(" ")[0] == "/remove_user":
+			username = text.split(" ")[1]
+			username_id = ig_client.username_info(username)['user']['pk']
+			remove = ig_client.remove_follower(username_id)
+
+			text_send = "{} has removed".format(username_id)
+			bot.sendMessage(chat_id=user_id, text=text_send)
+
+		elif text.split(" ")[0] == "/block":
+			username = text.split(" ")[1]
+			username_id = ig_client.username_info(username)["user"]["pk"]
+			block = ig_client.friendships_block(username_id)
+
+			text_send = "{}:{} has blocked".format(username,username_id)
+			bot.sendMessage(chat_id=user_id, text=text_send)
+
+		elif text.split(" ")[0] == "/unblock":
+			username_id = text.split(" ")[1]
+			block = ig_client.friendships_unblock(username_id)
+
+			username = ig_client.user_info(username_id)["user"]["username"]
+			text_send = "{} has unblocked".format(username)
+			bot.sendMessage(chat_id=user_id, text=text_send)
+
+
+		elif text.split(" ")[0] == "/blocked_list":
+			text = ""
+			block = ig_client.blocked_user_list()
+			for i in block['blocked_list']:
+				username = i['username']
+				full_name = i['full_name']
+				blocked_at = time.ctime(i['block_at'])
+				text2 = "{}({})\nblock_at: {}\n----------\n\n".format(username,full_name,blocked_at)
+				text += text2
+
+			now_location = 0
+			num = int(len(text) / 1024) - 1
+			for i in range(0,num):
+				bot.sendMessage(chat_id=user_id, text=text[now_location:now_location+1024])
+				now_location += 1024
+
 		elif text.split(" ")[0] == "/get_profile":
 			data = text.split(" ")[1]
 
@@ -147,8 +205,8 @@ def handler(message):
 			bot.sendPhoto(chat_id=user_id, photo=pic, caption=text_send)
 		else:
 			pass
-			
-		
+
+
 
 def story():
 	feed = None

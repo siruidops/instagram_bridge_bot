@@ -18,7 +18,7 @@ user_id = 00000000
 ```
 
 
-Install and usage (arch linux)
+Install and usage (<a href="https://archlinux.org/">arch linux</a>)
 ```bash
 $ sudo pacman -S git python python-pip
 $ git clone https://github.com/siruidops/instagram_bridge_bot.git
@@ -30,7 +30,7 @@ $ # enjoy
 ```
 <br />
 
-Install and usage (debian)
+Install and usage (<a href="https://www.debian.org/">debian</a>)
 ```bash
 $ sudo apt-get install git python3 python3-pip
 $ git clone https://github.com/siruidops/instagram_bridge_bot.git

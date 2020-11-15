@@ -40,6 +40,14 @@ $ python3 createcookie.py {username} {password}
 $ python3 instagram_bridge_bot.py
 $ # enjoy
 ```
+
+<a href="https://www.docker.com/">Docker</a> container:
+```bash
+$ sudo python3 createcookie.py {username} {password}
+$ sudo docker build --tag "instagram_bridge_bot" .
+$ sudo docker run --rm -it instagram_bridge_bot
+```
+
 <br />
 
 ```text

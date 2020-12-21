@@ -48,6 +48,15 @@ $ sudo docker build --tag "instagram_bridge_bot" .
 $ sudo docker run --rm -it instagram_bridge_bot
 ```
 
+
+From <a href="https://hub.docker.com/r/uidops/instagram_bridge_bot">docker hub</a> 
+```bash
+$ sudo docker pull uidops/instagram_bridge_bot:latest
+$ # clone project from gitlab and edit config/config.json and create cookie file
+$ sudo docker run --rm -it -v {PATH_DIR}/config:/config uidops/instagram_bridge_bot
+```
+
+
 <br />
 
 ```text
